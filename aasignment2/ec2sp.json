@@ -1,0 +1,19 @@
+{
+    "Resources": {
+        "Ec2demo1": {
+            "Type": "AWS::EC2::Instance",
+            "Properties": {
+             "ImageId": "ami-0ed9277fb7eb570c9"
+             }
+        },
+    
+        "demo1sg": {
+            "Type": "AWS::EC2::Instance",
+            "Properties": {
+               "GroupDescription": "This is control traffic"
+             } 
+                }
+            
+       
+    }
+}
