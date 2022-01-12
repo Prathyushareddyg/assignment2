@@ -8,12 +8,23 @@
         },
     
         "demo1sg": {
-            "Type": "AWS::EC2::Instance",
-            "Properties": {
-               "GroupDescription": "This is control traffic"
-             } 
-                }
-            
-       
-    }
+            "Type" : "AWS::EC2::SecurityGroup",
+            "Properties" : {
+          "VpcId" :"vpc-00f7793280ebf3960",
+         "GroupDescription" : "Allow http to client host",
+      "SecurityGroupIngress" : {
+         "IpProtocol" : "tcp",
+         "FromPort" : 80,
+         "ToPort" : 80,
+         "CidrIp" : "0.0.0.0/0"
+      },
+      "SecurityGroupEgress" : {
+         "IpProtocol" : "tcp",
+         "FromPort" : 80,
+         "ToPort" : 80,
+         "CidrIp" : "0.0.0.0/0"
+      }
+   }
+}
+} 
 }
